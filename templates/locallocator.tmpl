@@ -1245,11 +1245,8 @@
 			               <div class="ifr-bg-image">
 			                  <div class="embed gmap">
 			                     <div class="map_panel">
-			                        <img class='llp-static-map' style="width: 100%; height: 580px; object-fit:cover;"
-                            width="600" height="300"
-                            src='https://maps.googleapis.com/maps/api/staticmap?language=en&key=AIzaSyDEr9xZJzqb3v2TFlB5GHHSQ4Rcxj6AzQM&zoom=14&scale=2&size=600x300&maptype=roadmap&format=png&visual_refresh=true&label:1%7C<tmpl_varlatitude>,<tmpl_var longitude>&markers=icon:https://tacojohns.cname.meetsoci.com/images/locator/tacojohns-pin.png%7Cscale:2%7C<tmpl_var latitude>,<tmpl_var longitude>'
-                            alt='Google Map of <tmpl_var location.address.city>, <tmpl_var location.address.state_province> <tmpl_var location.address.postal_code>'>
-			                     </div>
+                                    <div id="map" class="map"></div>
+                                </div>
 			                  </div>
 			               </div>
 			            </div>
@@ -1708,6 +1705,15 @@
 		</script>
 
 		<script type="text/javascript">
+			setTimeout(function(){ 
+	        	var script = document.createElement('script');
+	        	script.src="/w2gi/javascript/backbone/bb/lib/require.js";
+	        	script.setAttribute("data-main", "/w2gi/javascript/backbone/bb/dist/bones.min");
+	        	document.getElementsByTagName('head')[0].appendChild(script);
+
+
+
+			  }, 800);
 
 			setTimeout(function() {
 				let className = "w2gi-backbonew2gi-backbone";
